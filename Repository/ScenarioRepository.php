@@ -22,24 +22,22 @@ abstract class ScenarioRepository
      *
      * @param string $name Scenario name
      * @param array $questions Questions for testing
-     * @param array $weight Weight of answer variants for each question
      * @param string $algorithm The name of the algorithm for calculating the results. Used by the algorithm factory
      * @return Scenario
      */
-    abstract protected function create(string $name, array $questions, array $weight, string $algorithm): Scenario;
+    abstract protected function create(string $name, array $questions, string $algorithm): Scenario;
 
     /**
      * Add new scenario in database
      *
      * @param string $name Unique script name
      * @param array $questions Questions for testing
-     * @param array $weight Weight of answer variants for each question
      * @param string $algorithm Algorithm name for calculating results
      * @return int Id of the created scenario
      *
      * @throws ScenarioAlreadyExistsException
      */
-    abstract public function add(string $name, array $questions, array $weight, string $algorithm): int;
+    abstract public function add(string $name, array $questions, string $algorithm): int;
 
     /**
      * Finds the scenario in the database and returns its object

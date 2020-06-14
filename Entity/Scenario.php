@@ -30,7 +30,8 @@ abstract class Scenario
     abstract public function getResult(array $points): int;
 
     /**
-     * Assigns weight issues. Questions without weight will not be taken into account when calculating the result
+     * Assigns weight issues. Questions without weight will not be taken into account when calculating the result.
+     * Uses the setWeight method of the algorithm
      *
      * @param Question[] $questions
      * @return Question[]

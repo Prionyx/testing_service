@@ -10,9 +10,8 @@ $questionRepository->add('make_pie', 'Любите ли вы выпекать п
 $scenarioRepository = new ScenarioRepository($db, $algorithmFactory);
 $scenarioRepository->add(
     'cook',
-    [$questionRepository->findByName('make_pie')],
-    [1, 2, 0],
-    'arithmeticAverage'
+    [$questionRepository->findByName('make_pie'), ...],
+    'cook'
 );
 
 /* Output of questions for the scenario */
